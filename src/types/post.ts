@@ -1,4 +1,4 @@
-interface Post {
+export interface Post {
   url: string;
   frontmatter: {
     tags: string[];

@@ -1,6 +1,7 @@
 ---
 import RootLayout from '@/layouts/root.layout.astro';
 import BlogPost from '@/components/blog-post.astro';
+import type { Post } from '@/types/post';
 
 
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })) as Post[];

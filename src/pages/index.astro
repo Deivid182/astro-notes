@@ -1,5 +1,6 @@
 ---
-import RootLayout from '../layouts/root.layout.astro';
+import RootLayout from '@/layouts/root.layout.astro';
+import Greeting from '@/components/greeting';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -22,4 +23,5 @@ import RootLayout from '../layouts/root.layout.astro';
 	<p>If you're interested in learning more about Astro, check out the official documentation at https://docs.astro.build</p>
 
 	<p>Thanks for visiting my site!</p>
+	<Greeting client:load messages={['Hello', 'Hi', 'Hey']} />
 </RootLayout>

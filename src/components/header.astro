@@ -1,8 +1,39 @@
 ---
 import Navigation from './navigation.astro';
+import ThemeIcon from './theme-icon.astro';
+import Menu from './menu.astro';
 ---
 <header>
   <nav>
+    <div class="nav-left">
+      <ThemeIcon />
+      <Menu />
+    </div>
     <Navigation />
   </nav>
 </header>
+
+<style>
+  header {
+    background-color: #F8FCFD;
+    padding: 1em;
+    border-bottom: 1px solid #a1a1a1;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  :global(.dark) header {
+    background-color: #1a1a1a;
+    color: white;
+  }
+</style>
